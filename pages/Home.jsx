@@ -26,7 +26,7 @@ export default function Home() {
   };
 
   return (
-    // 🔥 MAIN BACKGROUND CONTAINER
+    // MAIN BACKGROUND CONTAINER
     <div 
       className="min-h-screen bg-gradient-to-br from-[#FDE2E2] via-[#FFF0F5] to-[#FDE2E2] flex flex-col items-center justify-center relative font-sans text-[#D36E70] overflow-hidden"
       // Apply SVG background pattern
