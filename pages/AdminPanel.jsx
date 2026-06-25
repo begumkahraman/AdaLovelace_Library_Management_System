@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 // 1. STEP: Import logo image
 import logo from '../assets/logo.png';
 
-// 🔥 BACKGROUND PATTERN STYLE (Opacity 0.2 - More visible)
+// BACKGROUND PATTERN STYLE (Opacity 0.2 - More visible)
 const bgPatternStyle = {
   backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm-8 10c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm24 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm-16 8c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm8 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zM8 24c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm16 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm24 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm16 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm24 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm24 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm16 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0zm24 0c-2 2-2 6 0 8 2 2 6 2 8 0 2-2 2-6 0-8-2-2-6-2-8 0z' fill='%23D36E70' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E")`,
 };
@@ -21,7 +21,7 @@ export default function AdminPanel() {
   // State for statistics data
   const [stats, setStats] = useState({ users: [], books: [], transactions: [] });
   
-  // 👇 UPDATE 1: 'publisher' field added to book state
+  // UPDATE 1: 'publisher' field added to book state
   const [newBook, setNewBook] = useState({
     title: "", author: "", isbn: "", categoryName: "", publisher: "", totalQuantity: 5
   });
@@ -31,7 +31,7 @@ export default function AdminPanel() {
 
   useEffect(() => {
 
-    // 🔒 SECURITY CHECK: Allow only admin users
+    // SECURITY CHECK: Allow only admin users
     const role = localStorage.getItem('role');
     
     if (role !== 'admin') {
@@ -69,11 +69,11 @@ export default function AdminPanel() {
     }
   };
 
-  // ⭐ Shared style for all admin action buttons
+  // Shared style for all admin action buttons
   const commonButtonStyle = "bg-gradient-to-r from-[#D36E70] to-[#E08A8C] text-white font-bold px-8 py-3 rounded-full shadow-md hover:shadow-lg transition transform hover:scale-105 active:scale-95";
 
   return (
-    // 🔥 Main background container
+    // Main background container
     <div 
         className="min-h-screen bg-gradient-to-br from-[#FDE2E2] via-[#FFF0F5] to-[#FDE2E2] p-6 md:p-10 font-sans text-[#D36E70]"
         style={bgPatternStyle}
